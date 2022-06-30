@@ -3,6 +3,9 @@
  * SimpleTooltip Extension
  * Provides basic tooltips, supporting inline text and info icons
  *
+ * This version has been changed from the main by Fanra
+ * @links https://github.com/Fanra/SimpleTooltip Source code
+ *
  * For more info see https://mediawiki.org/wiki/Extension:SimpleTooltip
  *
  * @file
@@ -41,8 +44,8 @@ $wgExtensionCredits['other'][] = array(
    'path'           => __FILE__,
    'name'           => 'SimpleTooltip',
    'author'         => array( 'Simon Heimler' ),
-   'version'        => '1.1.0',
-   'url'            => 'https://www.mediawiki.org/wiki/Extension:SimpleTooltip',
+   'version'        => '2.0.0',
+   'url'            => 'https://github.com/Fanra/SimpleTooltip',
    'descriptionmsg' => 'simpletooltip-desc',
    'license-name'   => 'MIT'
 );

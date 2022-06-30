@@ -25,7 +25,7 @@ class SimpleTooltipParserFunction {
         // BUILD HTML                           //
         //////////////////////////////////////////
 
-		$content = Sanitizer::removeHTMLtags( $title );
+		$content = Sanitizer::removeSomeTags( $title );
 		$content = $parser->recursiveTagParseFully( $content );
 		$content = str_replace('"', "'", $content);
 		$content = trim( $content );
@@ -58,7 +58,7 @@ class SimpleTooltipParserFunction {
         //////////////////////////////////////////
 
         $html = '<span class="simple-tooltip simple-tooltip-info"';
-        $html .= ' data-simple-tooltip="' . htmlspecialchars(Sanitizer::removeHTMLtags($value)) . '"></span>';
+        $html .= ' data-simple-tooltip="' . htmlspecialchars(Sanitizer::removeSomeTags($value)) . '"></span>';
 
         return array(
             $html,
@@ -87,7 +87,7 @@ class SimpleTooltipParserFunction {
         //////////////////////////////////////////
 
         $html  = '<img class="simple-tooltip simple-tooltip-img"';
-        $html .= ' data-simple-tooltip="' . htmlspecialchars(Sanitizer::removeHTMLtags($title)) . '"';
+        $html .= ' data-simple-tooltip="' . htmlspecialchars(Sanitizer::removeSomeTags($title)) . '"';
         $html .= ' src="' . $imgUrl . '"></img>';
 
         return array(
